@@ -1,3 +1,5 @@
+# Pass the files to Hadoop server
+
 cat sample.txt
 cat sample.txt | python mapper.py > output.txt
 cat sample.txt | python mapper.py | python reducer.py 
@@ -20,15 +22,14 @@ hadoop jar $HADOOP_HOME/share/hadoop/tools/lib/hadoop-streaming-2.8.1.jar \
 -output /user/user-name/Task/output \
 -mapper ~/Downloads/Task2/join_mapper.py \
 -reducer ~/Downloads/Task2/join_reducer.py
-																																																																																																																																																																																																																																																																																																																																																																										
-
-hadoop fs -rmr /user/lobna/task2/*.txt
-
-hadoop dfs -ls /user/lobna/task2
-
-hadoop dfs -ls /user/lobna/task2/output
-
-hadoop dfs -cat /user/lobna/task2
 
 
+# Checking the output
 
+hadoop fs -rmr /user/user-name/task2/*.txt
+
+hadoop dfs -ls /user/user-name/task2
+
+hadoop dfs -ls /user/user-name/task2/output
+
+hadoop dfs -cat /user/user-name/task2
