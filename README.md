@@ -1,4 +1,4 @@
-# -MapReduce-program-for-Hadoop
+# MapReduce-program-for-Hadoop
 MapReduce program for Hadoop running on ubuntu.
 
 Choose a small dataset, analyse it to get some meaningful result. You have to clarify your dataset format and what you will get from it. 
