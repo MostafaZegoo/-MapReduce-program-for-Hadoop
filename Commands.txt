@@ -9,15 +9,15 @@ jps
 sbin/start-all.sh
 jps
 
-hadoop dfs -mkdir -p /user/lobna
+hadoop dfs -mkdir -p /user/user-name
 hadoop dfs -ls
 
-hadoop dfs -put ~/Downloads/Task2/*.csv /user/lobna/
+hadoop dfs -put ~/Downloads/Task2/*.csv /user/user-name/
 
 hadoop jar $HADOOP_HOME/share/hadoop/tools/lib/hadoop-streaming-2.8.1.jar \
 -Dstream.num.map.output.key.field=2 \
--input /user/lobna/Task/user.csv -input /user/lobna/Task/transaction.csv \
--output /user/lobna/Task/output \
+-input /user/user-name/Task/user.csv -input /user/user-name/Task/transaction.csv \
+-output /user/user-name/Task/output \
 -mapper ~/Downloads/Task2/join_mapper.py \
 -reducer ~/Downloads/Task2/join_reducer.py
 																																																																																																																																																																																																																																																																																																																																																																										
